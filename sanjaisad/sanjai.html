@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        
+
+
+
+
+
+* {
+   margin: 0px 0px 0px 0px;
+   border: 0px;
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+
+}
+
+/*navigation*/
+.nav {
+   display: flex;
+   justify-content: space-between;
+   padding-left: 15px;
+   background-color: #733636;
+   font-size: 22px;
+   height: 700px;
+   line-height: 60px;
+}
+
+.navbar {
+   position: sticky;
+   top: 0px;
+}
+
+li a {
+   text-decoration: none;
+   color: white;
+}
+
+li {
+   display: inline-flex;
+   margin-right: 30px;
+}
+
+.logo a {
+   text-decoration: none;
+   color: white;
+   font-size: 30px;
+}
+
+.logo {
+   margin-top: 0px;
+   margin-left: 20px;
+}
+
+.sidebar {
+   position: fixed;
+   top: 0px;
+   right: 0px;
+   height: 100vh;
+   width: 200px;
+   z-index: 999;
+   background-color: rgb(144, 222, 234);
+   backdrop-filter: blur(50px);
+   box-shadow: -10px 20px 10px rgba(0, 0, 0, 0.1);
+   display: none;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: flex-start;
+}
+
+/*
+.nav .hideonmobile a:hover::after{
+   background: orange;
+   width:5%;
+   transition:1s;
+}
+
+.nav .hideonmobile a::after{
+   content:'';
+   position:absolute;
+   height:3px;
+   width: 0;
+   left: 0;
+   top:40px;
+} */
+
+.sidebar li {
+   width: 60%;
+}
+
+.sidebar a {
+   /* color: black; */
+   margin-bottom: 10px;
+   width: 100%;
+   color: red;
+   font-weight: 600;
+}
+
+.menu-button {
+   display: none;
+}
+
+.container {
+   position: fixed;
+   top: 0px;
+   z-index: 2;
+   width: 100%;
+
+}
+
+.container .nav {
+   height: 80px;
+   width: 100%;
+}
+
+.portfolio .container .nav a:hover {
+   border-bottom: 3px solid rgb(52, 162, 190);
+   transition: .5s;
+   color: rgb(38, 203, 225);
+}
+
+.portfolio .container .nav li a:hover {
+   border-bottom: 3px solid rgb(52, 162, 190);
+   transition: .5s;
+   color: rgb(38, 203, 225);
+}
+
+.portfolio .container .nav li a {
+   position: relative;
+   height: 43px;
+}
+
+.portfolio .container .para {
+   font-size: 40px;
+   position: absolute;
+   top: 45%;
+   left: 40%;
+   color: white;
+}
+
+.portfolio .container .para p:hover {
+   color: aqua;
+}
+
+/*home page */
+
+.portfolio .profile {
+   height: 700px;
+   width: 100%;
+   background-image: url('https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y29kaW5nfGVufDB8fDB8fHww');
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.portfolio .profile h1 {
+   font-size: 40px;
+   padding-top: 300px;
+   padding-left: 10%;
+   color: rgb(255, 255, 255);
+}
+
+.profile h1 span {
+   color: rgb(224, 224, 68);
+}
+
+.profile .typing {
+   height: 200px;
+   width: 700px;
+   margin-left: 140px;
+}
+
+.profile .typing h2 {
+   color: rgb(255, 255, 255);
+   font-size: 30px;
+   margin-top: 10px;
+}
+
+/*skills-sec1*/
+
+.aboutme .sec1 {
+   border: 0px solid black;
+   width: 80%;
+   height: 550px;
+   margin: 50px auto;
+   padding-top: 10px;
+   background-color: #733636;
+   color: white;
+   border-radius: 20px;
+   box-shadow: -5px -5px 5px 0px #6b6d6d,
+      inset 3px 3px 5px rgba(94, 104, 121, 0.288);
+}
+
+/* for photo and information*/
+
+.aboutme .sec1 .left-side {
+   /* border: 1px solid black; */
+   width: 50%;
+   height: 250px;
+}
+
+.aboutme .sec1 img {
+   width: 30%;
+   height: 180px;
+   margin: 50px 50px;
+   border-radius: 40%;
+}
+
+.aboutme .sec1 .left-side {
+   display: flex;
+   float: left;
+}
+
+.details {
+   margin-top: 60px;
+   /*  border: 1px solid black; */
+   height: 170px;
+
+}
+
+.details h3 {
+   margin-bottom: 20px;
+}
+
+/*
+.details1 {
+   display: none;
+} */
+
+.left-side h3 span {
+   font-weight: lighter;
+}
+
+.aboutme .sec1 .right-side {
+   margin-top: 35px;
+   width: 50%;
+   height: 799px;
+   border: 0px solid black;
+   float: right;
+   margin-top: -500px;
+}
+
+.aboutme .sec1 .right-side h1 {
+   margin: 20px 439px 15px 0px;
+   font-size: 27px;
+   border-bottom: 2px solid aqua;
+}
+
+.aboutme .sec1 .right-side p {
+   padding: 10px 20px 15px 10px;
+   font-size: 18px;
+   text-align: justify;
+}
+
+.aboutme .sec1 .right-side h2 {
+   font-size: 25px;
+   margin-top: 20px;
+   border-bottom: 2px solid aqua;
+   margin-right: 294px;
+   margin-bottom: 10px;
+}
+
+.aboutme .sec1 .right-side .academic {
+   margin-top: 70px;
+}
+
+/*
+.aboutme .sec1 .right-side .interest li {
+   padding-left: 10px;
+   margin-top: 20px;
+   font-size: 18px;
+}
+
+.aboutme .sec1 .right-side .interest h2 {
+   margin-bottom: 30px;
+   margin-right: 390px;
+   margin-top: 50px;
+}  */
+
+.aboutme .sec1 .left-side .skills {
+   position: relative;
+   top: 400px;
+   right: 400px;
+}
+
+.aboutme .sec1 .left-bottom {
+   border: 0px solid black;
+   width: 555px;
+   height: 530px;
+   /* position: absolute; */
+   top: 1035px;
+}
+
+.aboutme .sec1 .left-bottom .skills h2 {
+   font-size: 25px;
+   border-bottom: 2px solid aqua;
+   margin-right: 415px;
+   margin-bottom: 20px;
+}
+
+.aboutme .sec1 .left-bottom .skills {
+   margin: 10px 10px 10px 80px;
+}
+
+.left-bottom .skills .html {
+   display: flex;
+   margin-bottom: 20px;
+   font-size: 25px;
+}
+
+.html progress {
+   margin-left: 7px;
+   border-radius: 10px;
+}
+
+.html .per {
+   margin-left: 15px;
+}
+
+.left-bottom .skills .css {
+   display: flex;
+   margin-bottom: 20px;
+   font-size: 25px;
+}
+
+.css progress {
+   margin-left: 33px;
+}
+
+.css .per {
+   margin-left: 15px;
+}
+
+.left-bottom .skills .js {
+   display: flex;
+   margin-bottom: 20px;
+   font-size: 25px;
+}
+
+.js progress {
+   margin-left: 58px;
+}
+
+.js .per {
+   margin-left: 15px;
+}
+
+.left-bottom .skills .react {
+   display: flex;
+   margin-bottom: 20px;
+   font-size: 25px;
+}
+
+.react progress {
+   margin-left: 20px;
+}
+
+.react .per {
+   margin-left: 15px;
+}
+
+/*services*/
+.service .whole {
+   display: flex;
+   width: 100%;
+   border: 0px solid black;
+   position: absolute;
+   margin-top: 90px;
+}
+
+.service:hover {
+   background-image: url('https://media.istockphoto.com/id/1351472483/photo/house-project-in-virtual-reality.jpg?s=612x612&w=0&k=20&c=WD5nBG2kzfNSUqvCOgbVL2E-pfDRzbukzp2pZMWxCjE=');
+   background-repeat: no-repeat;
+   background-size: cover;
+   transition: 2s;
+   color: white;
+}
+
+.service {
+   height: 1000px;
+   border: 0px solid black;
+}
+
+.service h1 {
+   position: absolute;
+   left: 600px;
+   width: 200px;
+   height: 40px;
+}
+
+.service h2 {
+   border: 0px solid blue;
+   width: 350px;
+   height: 40px;
+   position: relative;
+   top: 50px;
+   left: 500px;
+   border-bottom: 3px solid #783e3e;
+}
+
+.portfolio .service .work1 {
+   border: 1px solid black;
+   height: 350px;
+   width: 700px;
+   background-color: #733636;
+   margin: 60px;
+   position: relative;
+   border-radius: 50px;
+   box-shadow: -5px -5px 5px #5f5c5c73,
+      3px 3px 5px rgba(94, 104, 121, .288);
+   color: white;
+   transition: transform .5s ease;
+}
+
+.service .whole .work1 p {
+   width: 350px;
+   height: 150px;
+   border: 0px solid white;
+   text-align: center;
+   margin-top: 20px;
+   padding: 5px;
+}
+
+.service .whole .work1:hover {
+   transform: scale(1.05);
+}
+
+.service .whole .work1:hover {
+   transition: transform .5s ease;
+}
+
+.service .whole .work1 svg {
+   height: 120px;
+   width: 130px;
+   margin-top: 20px;
+   margin-left: 95px;
+   border: 0px solid wheat;
+   border-radius: 30%;
+}
+
+.service .whole .work1 svg:hover {
+   background-color: rgb(255, 255, 255);
+   transition: 1s;
+   color: rgb(26, 24, 24);
+
+}
+
+.service .whole .work1 h3 {
+   text-align: center;
+}
+
+.portfolio .service .work2 {
+   border: 1px solid black;
+   height: 350px;
+   width: 700px;
+   background-color: #733636;
+   margin: 60px;
+   position: relative;
+   border-radius: 50px;
+   color: white;
+   box-shadow: -5px -5px 5px #5f5c5c73,
+      3px 3px 5px rgba(94, 104, 121, .288);
+   transition: transform .5s ease;
+}
+
+.portfolio .service .work2 svg {
+   height: 120px;
+   width: 130px;
+   margin-top: 20px;
+   margin-left: 95px;
+   border: 0px solid wheat;
+   border-radius: 30%;
+}
+
+.service .whole .work2 svg:hover {
+   background-color: rgb(255, 255, 255);
+   transition: 1s;
+   color: rgb(26, 24, 24);
+}
+
+.service .whole .work2:hover {
+   transform: scale(1.05);
+}
+
+.service .whole .work2:hover {
+   transition: transform .5s ease;
+}
+
+.service .whole .work2 h3 {
+   text-align: center;
+}
+
+.portfolio .service .work2 p {
+   width: 350px;
+   height: 150px;
+   border: 0px solid white;
+   text-align: center;
+   margin-top: 20px;
+   padding: 5px;
+}
+
+.portfolio .service .work3 {
+   border: 1px solid black;
+   height: 350px;
+   width: 700px;
+   position: relative;
+   background-color: #733636;
+   border-radius: 50px;
+   margin: 60px;
+   color: white;
+   box-shadow: -5px -5px 5px #5f5c5c73,
+      3px 3px 5px rgba(94, 104, 121, .288);
+   transition: transform .5s ease;
+}
+
+.portfolio .service .work3 svg {
+   height: 120px;
+   width: 130px;
+   margin-top: 20px;
+   margin-left: 95px;
+   color: white;
+   border: 0px solid wheat;
+   border-radius: 30%;
+}
+
+.service .whole .work3 svg:hover {
+   background-color: rgb(255, 255, 255);
+   transition: 1s;
+   color: rgb(26, 24, 24);
+}
+
+.service .whole .work3:hover {
+   transform: scale(1.05);
+   transition: transform .5s ease;
+}
+
+.service .whole .work3 h3 {
+   text-align: center;
+}
+
+.portfolio .service .work3 p {
+   width: 350px;
+   height: 150px;
+   border: 0px solid white;
+   text-align: center;
+   margin-top: 20px;
+   padding: 5px;
+}
+
+.service .whole1 {
+   display: flex;
+   width: 100%;
+   border: 0px solid rgb(142, 77, 77);
+   position: relative;
+   top: 300px;
+   margin-top: 90px;
+   margin-bottom: 330px;
+}
+
+.portfolio .service .work4 {
+   border: 1px solid black;
+   height: 350px;
+   width: 700px;
+   background-color: #733636;
+   margin: 60px;
+   position: relative;
+   border-radius: 50px;
+   box-shadow: -5px -5px 5px #5f5c5c73,
+      3px 3px 5px rgba(94, 104, 121, .288);
+   color: white;
+   transition: transform .5s ease;
+}
+
+.portfolio .service .whole1 .work4 svg {
+   height: 120px;
+   width: 130px;
+   margin-top: 20px;
+   margin-left: 95px;
+   border: 0px solid wheat;
+   border-radius: 30%;
+}
+
+.service .whole1 .work4 svg:hover {
+   background-color: rgb(255, 255, 255);
+   transition: 1s;
+   color: rgb(26, 24, 24);
+}
+
+.whole1 .work4 p {
+   width: 350px;
+   height: 150px;
+   border: 0px solid white;
+   text-align: center;
+   margin-top: 20px;
+   padding: 5px;
+}
+
+.service .whole1 .work4:hover {
+   transition: transform .5s ease;
+   transform: scale(1.05);
+}
+
+.service .whole1 .work4 h3 {
+   text-align: center;
+}
+
+.portfolio .service .work5 {
+   border: 1px solid black;
+   height: 350px;
+   width: 700px;
+   background-color: #733636;
+   margin: 60px;
+   position: relative;
+   border-radius: 50px;
+   box-shadow: -5px -5px 5px #5f5c5c73,
+      3px 3px 5px rgba(94, 104, 121, .288);
+   color: white;
+   transition: transform .5s ease;
+}
+
+.portfolio .service .whole1 .work5 svg {
+   height: 120px;
+   width: 130px;
+   margin-top: 20px;
+   margin-left: 95px;
+   border: 0px solid wheat;
+   border-radius: 30%;
+}
+
+.service .whole1 .work5 svg:hover {
+   background-color: rgb(255, 255, 255);
+   transition: 1s;
+   color: rgb(26, 24, 24);
+}
+
+.whole1 .work5 p {
+   width: 350px;
+   height: 150px;
+   border: 0px solid white;
+   text-align: center;
+   margin-top: 20px;
+   padding: 5px;
+}
+
+.service .whole1 .work5:hover {
+   transition: transform .5s ease;
+   transform: scale(1.05);
+}
+
+.service .whole1 .work5 h3 {
+   text-align: center;
+}
+
+
+.portfolio .service .work6 {
+   border: 1px solid black;
+   height: 350px;
+   width: 700px;
+   background-color: #733636;
+   margin: 60px;
+   position: relative;
+   border-radius: 50px;
+   box-shadow: -5px -5px 5px #5f5c5c73,
+      3px 3px 5px rgba(94, 104, 121, .288);
+   color: white;
+   transition: transform .5s ease;
+}
+
+
+.portfolio .service .whole1 .work6 svg {
+   height: 120px;
+   width: 130px;
+   margin-top: 20px;
+   margin-left: 95px;
+   border: 0px solid wheat;
+   border-radius: 30%;
+}
+
+.service .whole1 .work6 svg:hover {
+   background-color: rgb(255, 255, 255);
+   transition: 1s;
+   color: rgb(26, 24, 24);
+}
+
+.whole1 .work6 p {
+   width: 350px;
+   height: 150px;
+   border: 0px solid white;
+   text-align: center;
+   margin-top: 20px;
+   padding: 5px;
+}
+
+.service .whole1 .work6:hover {
+   transition: transform .5s ease;
+   transform: scale(1.05);
+}
+
+.service .whole1 .work6 h3 {
+   text-align: center;
+}
+
+/*project*/
+
+.project h1 {
+   text-align: center;
+   margin-bottom: 10px;
+}
+
+.project h3 {
+   width: 250px;
+   margin-left: 570px;
+   border-bottom: 3px solid #733636;
+   margin-bottom: 50px;
+}
+
+.portfolio .project .wholeproject {
+   display: flex;
+   margin-bottom: 20px;
+   padding-left: 70px;
+   width: 100%;
+   border: 0px solid black;
+}
+
+.portfolio .project .wholeproject:hover {
+   background-image: url('https://images.unsplash.com/photo-1488229297570-58520851e868?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGlubm92YXRpb258ZW58MHx8MHx8fDA%3D');
+   background-repeat: no-repeat;
+   background-size: cover;
+   transition: 2s;
+}
+
+.portfolio .project .project1 {
+   border: 1px solid black;
+   height: 350px;
+   width: 300px;
+   background-color: #733636;
+   margin: 60px;
+   position: relative;
+   border-radius: 5px;
+   box-shadow: -5px -5px 5px #5f5c5c73,
+      3px 3px 5px rgba(94, 104, 121, .288);
+   color: white;
+   transition: transform .5s ease;
+}
+
+.portfolio .project .project1:hover {
+   /*  transition: transform .5s ease;
+   transform: scale(1.07);*/
+   border: 1px solid white;
+   transform: rotateZ(-10deg);
+   filter: saturate(3);
+}
+
+.project .project1 img {
+   width: 298px;
+   height: 220px;
+   border-radius: 5px;
+   border: 0px solid white;
+}
+
+.project .project1 p {
+   border: 0px solid rgb(8, 179, 195);
+   font-size: 25px;
+   margin-top: 20px;
+   height: 0px;
+}
+
+.project .project1 .con {
+   margin-left: 20px;
+   margin-top: 50px;
+   border: 0px solid white;
+   height: 30px;
+   width: 170px;
+}
+
+.project .project1 .con1 {
+   font-size: 17px;
+   margin-top: 5px;
+   margin-left: 20px;
+   color: aqua;
+   width: 250px;
+   height: 30px;
+   border: 0px solid rgb(0, 0, 0);
+}
+
+.project .project1 .con1 i {
+   margin-left: 130px;
+   font-size: 25px;
+}
+
+.portfolio .project .project2 {
+   border: 1px solid black;
+   height: 350px;
+   width: 300px;
+   background-color: #733636;
+   margin: 60px;
+   position: relative;
+   border-radius: 5px;
+   box-shadow: -5px -5px 5px #5f5c5c73,
+      3px 3px 5px rgba(94, 104, 121, .288);
+   color: white;
+   transition: transform .5s ease;
+}
+
+.portfolio .project .project2:hover {
+   transition: transform .5s ease;
+   transform: scale(1.07);
+   border: 1px solid white;
+   transform: rotateZ(-10deg);
+   filter: saturate(3);
+}
+
+.project .project2 img {
+   width: 298px;
+   height: 220px;
+   border-radius: 5px;
+   border: 0px solid white;
+}
+
+.project .project2 p {
+   border: 0px solid rgb(8, 179, 195);
+   font-size: 25px;
+   margin-top: 20px;
+   height: 0px;
+}
+
+.project .project2 .con {
+   margin-left: 20px;
+   margin-top: 50px;
+   border: 0px solid white;
+   height: 30px;
+   width: 170px;
+}
+
+.project .project2 .con1 {
+   font-size: 17px;
+   margin-top: 5px;
+   margin-left: 20px;
+   color: aqua;
+   width: 250px;
+   height: 30px;
+   border: 0px solid rgb(0, 0, 0);
+}
+
+.project .project2 .con1 i {
+   margin-left: 100px;
+   font-size: 25px;
+}
+
+.portfolio .project .project3 {
+   border: 1px solid black;
+   height: 350px;
+   width: 300px;
+   background-color: #733636;
+   margin: 60px;
+   position: relative;
+   border-radius: 5px;
+   box-shadow: -5px -5px 5px #5f5c5c73,
+      3px 3px 5px rgba(94, 104, 121, .288);
+   color: white;
+   transition: transform .5s ease;
+}
+
+.portfolio .project .project3:hover {
+   transition: transform .5s ease;
+   transform: scale(1.07);
+   border: 1px solid white;
+   transform: rotateZ(-10deg);
+   filter: saturate(3);
+}
+
+.wholeproject:hover>.pro {
+   transform: rotateY(-30deg);
+   transition: transform .5s ease;
+}
+
+.project .project3 img {
+   width: 300px;
+   height: 220px;
+   border-radius: 5px;
+   border: 0px solid white;
+}
+
+.project .project3 p {
+   border: 0px solid rgb(8, 179, 195);
+   font-size: 25px;
+   margin-top: 20px;
+   height: 0px;
+}
+
+.project .project3 .con {
+   margin-left: 20px;
+   margin-top: 50px;
+   border: 0px solid white;
+   height: 30px;
+   width: 170px;
+}
+
+.project .project3 .con1 {
+   font-size: 17px;
+   margin-top: 5px;
+   margin-left: 20px;
+   color: aqua;
+   width: 250px;
+   height: 30px;
+   border: 0px solid rgb(0, 0, 0);
+}
+
+.project .project3 .con1 i {
+   margin-left: 100px;
+   font-size: 25px;
+}
+
+/* contact */
+
+.portfolio .contact {
+   height: 750px;
+   width: 100%;
+   background-color: antiquewhite;
+   margin-bottom: 50px;
+
+}
+
+.contact .contact1 {
+   height: 520px;
+   width: 80%;
+   /* background-color: #2bb1b1;*/
+   margin: auto;
+   top: 70px;
+   bottom: 50px;
+   border: 0px solid blue;
+   position: relative;
+}
+
+.contact h1 {
+   text-align: center;
+   padding-top: 10px;
+}
+
+.contact1 .left {
+   height: 520px;
+   width: 500px;
+   float: left;
+   background-color: #783e3e;
+}
+
+.contact1 .left h2 {
+   font-size: 35px;
+   color: white;
+   padding-top: 20px;
+
+   /*  height: 60px; */
+   text-align: center;
+   width: 209px;
+   margin-bottom: 39px;
+   margin-left: 20px;
+   border-bottom: 3px solid aqua;
+}
+
+.contact1 .left input {
+   height: 40px;
+   width: 400px;
+   border-radius: 10px;
+   margin-left: 55px;
+   border: 1px solid rgb(254, 254, 254);
+   background: transparent;
+   opacity: 1;
+   margin-bottom: 20px;
+}
+
+.contact1 .left input::placeholder {
+   color: white;
+   font-size: 15px;
+   padding-left: 10PX;
+}
+
+.contact .left .subject {
+   height: 90px;
+}
+
+.contact .left button {
+   height: 50px;
+   width: 130px;
+   border-radius: 30px;
+   margin-left: 55px;
+   font-weight: 600;
+   font-size: 18px;
+   background-color: rgb(114, 192, 192);
+}
+
+.contact .left button:hover {
+   cursor: pointer;
+}
+
+.contact .right {
+   height: 520px;
+   width: 615px;
+   padding-left: 20px;
+   padding-top: 10px;
+   padding-right: 20px;
+   float: right;
+   color: white;
+   background-color: rgb(127, 87, 87);
+}
+
+.contact .right h1 {
+   border: 0px solid white;
+   width: 172px;
+   border-bottom: 3px solid aqua;
+   margin-bottom: 35px;
+}
+
+.right .details1 {
+   margin-top: 25px;
+   display: flex;
+   margin-bottom: 10px;
+}
+
+.right .details1 p {
+   margin-left: 15px;
+}
+
+.right .details2 {
+   margin-bottom: 10px;
+   display: flex;
+}
+
+.right .details2 p {
+   margin-left: 15px;
+}
+
+.right .details3 {
+   margin-bottom: 10px;
+   display: flex;
+}
+
+.right .details3 p {
+   margin-left: 15px;
+}
+
+.right .logo1 {
+   margin-top: 50px;
+}
+
+.right .logo1 i {
+   color: white;
+   font-size: 30px;
+   margin: 10px;
+   background-color: rgb(149, 91, 91);
+   width: 50px;
+   height: 50px;
+   line-height: 50px;
+   border-radius: 50%;
+   text-align: center;
+   border: 2px solid rgb(40, 231, 228);
+}
+
+.contact .dec {
+   border: 0px solid blue;
+   margin-top: 100px;
+   text-align: center;
+   font-size: 20px;
+}
+
+.contact .dec span {
+   font-weight: 900;
+}
+
+.wholeproject:hover {
+   filter: brightness(0.9) saturate(1) contrast(1.3) blur(.5px);
+}
+
+
+
+@media screen and (max-width:700px) {
+   /* body {
+      background-image: url('https://images.pexels.com/photos/8092315/pexels-photo-8092315.jpeg?auto=compress&cs=tinysrgb&h=204&fit=crop&w=228&dpr=1');
+      background-repeat: no-repeat;
+      background-size: cover;
+   }  */
+
+   .menu-button {
+      display: block;
+   }
+
+   .hideonmobile {
+      display: none;
+   }
+
+   .portfolio .profile {
+      background-image: url('https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?auto=compress&cs=tinysrgb&w=600');
+      height: 600px;
+      width: 1400px;
+      margin-top: 80px;
+   }
+
+   .portfolio .profile h1 {
+      font-size: 30px;
+      padding-top: 250px;
+      padding-left: 10%;
+      color: rgb(255, 255, 255);
+   }
+
+   .profile h1 span {
+      color: rgb(224, 224, 68);
+   }
+
+   .profile .typing {
+      height: 50px;
+      width: 250px;
+      margin-left: 140px;
+      border: 0px solid white;
+   }
+
+   .profile .typing h2 {
+      color: rgb(255, 255, 255);
+      font-size: 23px;
+      margin-top: 10px;
+   }
+
+   .aboutme .sec1 {
+      border: 0px solid black;
+      width: 1350px;
+      height: 130rem;
+      margin: 50px 30px 50px 30px;
+      padding-top: 10px;
+      background-color: #733636;
+      color: white;
+      border-radius: 20px;
+      box-shadow: -5px -5px 5px 0px #6b6d6d,
+         inset 3px 3px 5px rgba(94, 104, 121, 0.288);
+   }
+
+   .aboutme .sec1 .left-side {
+      display: block;
+   }
+
+   .aboutme .sec1 img {
+      width: 350px;
+      height: 350px;
+      margin-top: 50px;
+      margin-left: 100px;
+      border-radius: 10%;
+   }
+
+   .sec1 .left-bottom .skills {
+      position: relative;
+      top: 490px;
+      left: 20px;
+   }
+
+   .aboutme .sec1 .left-bottom .skills h2 {
+      font-size: 45px;
+   }
+
+
+   .skills progress {
+      font-size: 20px;
+   }
+
+   .skills .per {
+      font-size: 25px;
+   }
+
+   .sec1 .left-side.details {
+      position: absolute;
+      left: 250px;
+   }
+
+   .details {
+      margin-top: -20px;
+      /*  border: 1px solid black; */
+      height: 170px;
+      margin-left: 100px;
+      margin-top: 20px;
+      font-size: 25px;
+   }
+
+   .right-side .ri {
+      margin-top: 172%;
+      margin-left: -550px;
+      width: 990px;
+   }
+
+   .right-side .ri h1 {
+      padding-right: 20%;
+      width: 200px;
+      padding: 0px;
+      border: 0px solid white;
+   }
+
+   .right-side .academic {
+      position: relative;
+      left: -550px;
+      border: 0px solid white;
+      width: 990px;
+   }
+
+   .right-side .academic h2 {
+      border: 0px solid white;
+      width: 480px;
+   }
+
+   .aboutme .sec1 .right-side p {
+      font-size: 32px;
+      line-height: 40px;
+      text-align: justify;
+   }
+
+   .aboutme .sec1 .right-side h2 {
+      font-size: 45px;
+   }
+
+   .aboutme .sec1 .right-side h1 {
+      font-size: 45px;
+   }
+
+   .service h2 {
+      border: 0px solid black;
+      width: 450px;
+   }
+
+   .service:hover {
+      background-image: none;
+   }
+
+   .service h1 {
+      color: red;
+   }
+
+   .service h2 {
+      color: black;
+   }
+
+   .service .whole .work1 {
+      margin-left: 45px;
+   }
+
+   .service .whole1 .work4 {
+      margin-left: 45px;
+   }
+
+   .service .whole1 {
+      margin-top: 170px;
+   }
+
+   .portfolio .project .wholeproject:hover {
+      background-image: none;
+   }
+
+   .project h1 {
+      text-align: center;
+      border: 0px solid black;
+      margin-left: 600px;
+      color: red;
+   }
+
+   .portfolio .contact {
+      height: 750px;
+      width: 1380px;
+      background-color: antiquewhite;
+      margin-bottom: 50px;
+   }
+
+   .portfolio .contact .right {
+      width: 579px;
+   }
+
+   .portfolio .contact .con {
+      color: red;
+   }
+
+   .contact .contact1 .left h2 {
+      border: 0px solid red;
+      width: 400px;
+      margin-left: -70px;
+      font-size: 25px;
+
+   }
+
+   .contact .contact1 .right h1 {
+      border: 0px solid red;
+      width: max-content;
+      font-size: 25px;
+   }
+   body{
+      background-color: rgb(70, 69, 69);
+   }
+
+}
+
+@media screen and (max-width:400px) {
+   .sidebar {
+      width: 100%;
+   }
+}
+
+
+
+
+
+
+
+
+
+function showsidebar() {
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+}
+
+function hidesidebar() {
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+}
+
+
+
+
+
+
+
+
+
+
+    </style>
+    <script type="text/javascript" src="./scipt.js"></script>
+    <script src="https://kit.fontawesome.com/7bb075a920.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="portfolio">
+        <!--navigation -->
+        <div class="container">
+            <div class="nav">
+                <div class="logo"><a href="#">Code Companion</a></div>
+                <ul class="sidebar">
+                    <li onclick=hidesidebar()><a href="#"><img
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAY9JREFUWEft179LVlEcx/GXJLrk0KCTbrW7KQ7+Aza0pNha0CAOgriIBC4OSpNEBPUPRDSKY2sEEREh4qKL2eSvQQTzHrhPXB6Oj+fYjYfiueO9n/M97/v9fs73e2+XNl9dbd5fByCWgT6s4SHu1Fii72XcN9WYMYDnmKtx4+ZQI/jYuBkD2MZdnOJTTSC9GC1jrWKhFcAPDOALhmsCGMJuGSuU4HEH4L/IQHfhlReYxdk1XsnywBh6cHLNKQgA5/ha6O5XTBZjGSyMt1c+eI0nrUqQavwGQNAfYhobVyzOysBNAMKaX1jBEi6agmQBHKA/lSKi+1C28Z+VZ1kAjUb0Bwye4tVNAd4nDqHQxsebKI8xFfFCVgZS37xqwrBmBxOFGbciAf46wCYmcVTHKZgv5vZt7ONli3Q0MhCcv1iegqvkWX0gdRrewgO8S6hZVglSARL2/S3pAPxbGfhc46dYzCfLxYl51moazmA9x2EZ2vDdcK8ymqN/RqHFPiqFGbGTpG+LQfWtquz8mrU9A5dH0mwhCjR/PgAAAABJRU5ErkJggg==" /></a>
+                    </li>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#About">ABOUT</a></li>
+                    <li><a href="#SERVICES">WORK</a></li>
+
+                    <li><a href="#PROJECTS">BLOG</a></li>
+                    <li><a href="#CONTAACT">CONTACT</a></li>
+
+
+                </ul>
+                <ul>
+                    <li class="hideonmobile"><a href="#">HOME</a></li>
+                    <li class="hideonmobile"><a href="#ABOUT">ABOUT</a></li>
+                    <li class="hideonmobile"><a href="#SERVICES">SERVICES</a></li>
+                    <li class="hideonmobile"><a href="#PROJECTS">PROJECT</a></li>
+                    <li class="hideonmobile"><a href="#CONTACT">CONTACT</a></li>
+                    <li class="menu-button" onclick=showsidebar()><a href="#"><img
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAIJJREFUWEdjZBhgwDjA9jOMOmA0BEZDAFcIZDIwMITTIIsWMDAwXEA2F5cDehkYGIpo4ABHBgaGA0PCATTwPHYjR3PBoA2B0Vww4AXRaDYc8BBQZmBgkKWBK0AV0YchURcMeDngxsDAYEWDKFjAwMDwgJgooIHdo7XhaAiMhgD2EAAAPnUUIVKUTycAAAAASUVORK5CYII=" /></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--Home page-->
+        <div class="profile">
+            <h1>Hello,<span> I am Sanjai</span></h1>
+            <div class="typing">
+
+                <h2><span class="type"></span></h2>
+                <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+                <script>
+                    var typed = new Typed(".type", {
+                        strings: ['Web Designer', 'Web Developer..', ],
+                        typeSpeed: 90,
+                        backSpeed: 100,
+                        loop: true
+                    });
+                </script>
+            </div>
+        </div>
+        <!--aboutme-->
+        <div id="ABOUT">
+            <div class="aboutme">
+                <section class="sec1">
+                    <div class="left-side">
+                        <img src="./open.jpg"
+                            alt="pic1">
+                        <div class="details">
+                            <h3>Name : <span>Sanjai B</span></h3>
+                            <h3>Profile : <span>Front end developer</span></h3>
+                            <h3>Email : <span>sanjai10803@gmail.com</span></h3>
+                            <h3>Phone : <span>+91 9789740124</span></h3>
+
+                        </div>
+                        <!-- <div class="details1">
+                        <p>Name : Sanjai B</p>
+                        <p>Profile : Front end developer</p>
+                        <p>Email : sanjai10803@gmail.com</p>
+                        <p>Phone : 9789740124</p>
+                        </div>-->
+                    </div>
+                    <!--leftside-->
+                    <div class="left-bottom">
+                        <div class="skills">
+                            <h2> Skills</h2>
+                            <div class="html">
+                                <p>HTML
+                                    <progress max="100" value="80"></progress>
+                                    <p class="per">80%</p>
+                                </p>
+                            </div>
+                            <div class="css">
+                                <p>CSS
+                                    <progress max="100" value="70"></progress>
+                                    <p class="per">70%</p>
+                                </p>
+                            </div>
+                            <div class="js">
+                                <p>Js
+                                    <progress max="100" value="10"></progress>
+                                    <p class="per">10%</p>
+                                </p>
+                            </div>
+                            <div class="react">
+                                <p>React
+                                    <progress max="100" value="4"></progress>
+                                    <p class="per">4%</p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--rightside-->
+                    <div class="right-side">
+                        <div class="ri">
+                            <h1>About Me</h1>
+                            <p> Dedicated and adaptable individual with a strong problem-solving
+                                background. Collaborative team player with a passion for your field or
+                                industry.</p>
+                        </div>
+                        <div class="academic">
+                            <h2>Academic Qualifications</h2>
+                            <p> B.E - Pursuing Bachelor of Engineering at
+                                M.Kumarasamy College Of Engineering in
+                                the stream of Electronics and Communication
+                                Engineering with CGPA till 4th Sem (7.89) in
+                                the batch 2021-2025.</p>
+                            <p>Completed My Higher Secondary with 89.39%
+                                in 2021 At Bharani Park
+                                Matric.Hr.Sec.School.</p>
+                            <p>Completed My Senior Secondary with 89% in
+                                2019 At Bharani Park Matric.Hr.Sec.School.</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <!--work-->
+
+        <div class="service" id="SERVICES">
+            <h1>SERVICES</h1>
+            <h2>INNOVATION | CONSISTENCY</h2>
+
+            <div class="whole">
+                <div class="work1">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M4 16H20V5H4V16ZM13 18V20H17V22H7V20H11V18H2.9918C2.44405 18 2 17.5511 2 16.9925V4.00748C2 3.45107 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44892 22 4.00748V16.9925C22 17.5489 21.5447 18 21.0082 18H13Z">
+                        </path>
+                    </svg>
+                    <h3>WEB DESIGNING</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi odit sint incidunt ex totam,
+                        magnam veniam facere cumque ipsum numquam quod! Incidunt iure dolores totam, magnam laudantium
+                        fugit nobis velit, officiis tenetur repellendus corrupti delectus adipisci explicabo. Non quasi
+                        perferendis sed! Earum a similique tenetur suscipit iusto cupiditate in officia!</p>
+
+                </div>
+                <div class="work2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M11 11V5.82843L9.17157 7.65685L7.75736 6.24264L12 2L16.2426 6.24264L14.8284 7.65685L13 5.82843V11H18.1716L16.3431 9.17157L17.7574 7.75736L22 12L17.7574 16.2426L16.3431 14.8284L18.1716 13H13V18.1716L14.8284 16.3431L16.2426 17.7574L12 22L7.75736 17.7574L9.17157 16.3431L11 18.1716V13H5.82843L7.65685 14.8284L6.24264 16.2426L2 12L6.24264 7.75736L7.65685 9.17157L5.82843 11H11Z">
+                        </path>
+                    </svg>
+                    <h3>WEB DEVELOPMENT</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea quia dolorem aspernatur sequi non
+                        quibusdam commodi asperiores error consectetur magni?</p>
+
+                </div>
+                <div class="work3">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M7 4V20H17V4H7ZM6 2H18C18.5523 2 19 2.44772 19 3V21C19 21.5523 18.5523 22 18 22H6C5.44772 22 5 21.5523 5 21V3C5 2.44772 5.44772 2 6 2ZM12 17C12.5523 17 13 17.4477 13 18C13 18.5523 12.5523 19 12 19C11.4477 19 11 18.5523 11 18C11 17.4477 11.4477 17 12 17Z">
+                        </path>
+                    </svg>
+                    <h3>RESPONDIVE DESIGN</h3>
+                    <P>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor blanditiis libero adipisci
+                        tenetur doloribus vel corrupti molestiae velit nesciunt eligendi itaque, fuga molestias aut
+                        omnis, ipapiente unde cumque dolor asperiores tempora iure!</P>
+
+                </div>
+
+            </div>
+            <div class="whole1">
+                <div class="work4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M17 10H20V6H4V10H15V8H17V10ZM6 3V1H8V3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934C2 3.44476 2.45531 3 2.9918 3H6ZM7 19C8.65685 19 10 17.6569 10 16C10 14.3431 8.65685 13 7 13C5.34315 13 4 14.3431 4 16C4 17.6569 5.34315 19 7 19Z">
+                        </path>
+                    </svg>
+                    <h3>ANTENNA DESIGN</h3>
+                    <P>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor blanditiis libero adipisci
+                        tenetur doloribus vel corrupti molestiae velit nesciunt eligendi itaque, fuga molestias aut
+                        omnis, ipapiente unde cumque dolor asperiores tempora iure!</P>
+
+                </div>
+                <div class="work5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M21 18H6C5.44772 18 5 18.4477 5 19C5 19.5523 5.44772 20 6 20H21V22H6C4.34315 22 3 20.6569 3 19V4C3 2.89543 3.89543 2 5 2H21V18ZM16 9V7H8V9H16Z">
+                        </path>
+                    </svg>
+                    <h3>COADING</h3>
+                    <P>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor blanditiis libero adipisci
+                        tenetur doloribus vel corrupti molestiae velit nesciunt eligendi itaque, fuga molestias aut
+                        omnis, ipapiente unde cumque dolor asperiores tempora iure!</P>
+
+                </div>
+                <div class="work6">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12.0001 3C10.3432 3 9.00008 4.34315 9.00008 6V12C9.00008 13.6569 10.3432 15 12.0001 15C13.6569 15 15.0001 13.6569 15.0001 12V6C15.0001 4.34315 13.6569 3 12.0001 3ZM12.0001 1C14.7615 1 17.0001 3.23858 17.0001 6V12C17.0001 14.7614 14.7615 17 12.0001 17C9.23865 17 7.00008 14.7614 7.00008 12V6C7.00008 3.23858 9.23865 1 12.0001 1ZM2.19238 13.9615L4.15392 13.5692C4.88321 17.2361 8.11888 20 12.0001 20C15.8813 20 19.1169 17.2361 19.8462 13.5692L21.8078 13.9615C20.8961 18.5452 16.8516 22 12.0001 22C7.14858 22 3.104 18.5452 2.19238 13.9615Z">
+                        </path>
+                    </svg>
+                    <h3>RESPONDIVE DESIGN</h3>
+                    <P>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor blanditiis libero adipisci
+                        tenetur doloribus vel corrupti molestiae velit nesciunt eligendi itaque, fuga molestias aut
+                        omnis, ipapiente unde cumque dolor asperiores tempora iure!</P>
+                </div>
+            </div>
+        </div>
+        <!--projects-->
+        <div class="project" id="PROJECTS">
+            <h1>PROJECTS</h1>
+            <h3>WORK BECOMES RESULT</h3>
+            <div class="wholeproject">
+                <div class="pro">
+                    <div class="project1">
+                        <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHdlYiUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D"
+                            alt="pic1">
+                        <p class="con">DESIGN </p>
+                        <p class="con1">HTML / CSS <i class="fa-solid fa-arrow-right"></i></p>
+
+                    </div>
+                </div>
+                <div class="pro">
+                    <div class="project2">
+                        <img src="https://images.unsplash.com/photo-1504992963429-56f2d62fbff0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGlubm92YXRpb258ZW58MHx8MHx8fDA%3D"
+                            alt="pic1">
+                        <p class="con">FUNCTIONALITY </p>
+                        <p class="con1">HTML / CSS / JS <i class="fa-solid fa-arrow-right"></i></p>
+
+                    </div>
+                </div>
+                <div class="pro">
+                    <div class="project3">
+                        <img src="https://media.istockphoto.com/id/1495819409/photo/digital-mind-brain-artificial-intelligence-concept.webp?b=1&s=170667a&w=0&k=20&c=rW0mL-FkO53lwhIHSyzxDafZMeoavzwdfuJb3U_ZBHU="
+                            alt="pic1">
+                        <p class="con">FRAMEWORKS</p>
+                        <p class="con1">HTML - REACT <i class="fa-solid fa-arrow-right"></i></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Contact-->
+        <div class="contact" id="CONTACT">
+            <h1 class="con">CONTACT</h1>
+            <div class="contact1">
+                <div class="left">
+                    <h2> Send message </h2>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="text" placeholder="Your Email" required>
+                    <input type="text" placeholder="Ph  number" required>
+                    <input type="text" placeholder="Your Name " required>
+                    <input class="subject" type="text" placeholder="Subject">
+                    <button type="button">SUBMIT</button>
+
+                </div>
+                <div class="right">
+                    <h1>Get in touch</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem facere possimus sed, ipsam at amet
+                        magni vitae porro officiis sequi omnis quasi deleniti ducimus perferendis cum culpa facilis.
+                        Saepe quasi accusamus rerum possimus dolores. Vel iure suscipit voluptatibus facilis itaque
+                        inventore praesentium illo, natus, libero dicta, maxime ut maiores porro.</p>
+                    <div class="details1">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Annai sathya street,karur-639006</p>
+                    </div>
+                    <div class="details2">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>9789740124</p>
+                    </div>
+                    <div class="details3">
+                        <i class="fa-solid fa-envelope-circle-check"></i>
+                        <p>sanjai10803@gmail.com</p>
+                    </div>
+
+                    <div class="logo1">
+                        <a href="https://github.com/Sanjai175" target="_blank"><i
+                                class="fa-brands fa-square-github"></i></a>
+                        <a href="https://www.linkedin.com/in/sanjai-balasubramanian-05810b242" target="_blank"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/sanjai_5379?igsh=MWtqb2lrMW9nZjN4Ng==" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100074368241984&mibextid=rS40aB7S9Ucbxw6v"
+                            target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="dec">
+                <p>@ copyright <span>CodeCompanion.</span> All Rights Reserved</p>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
